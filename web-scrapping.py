@@ -8,8 +8,8 @@ def get_page():
 	global url
 	
 	# Ask the user to input "Enter url of a medium article: " and collect it in url
-	url = input("Enter the URL you want to scrape: ")
-    # handling possible error --- Commented due to using a different article/url
+	url = input("Enter the URL you want to scrape (this must be an article from Medium): ")
+    # handling possible error (If the user added an url not from the desired domain)
 	if not re.match(r'https?://medium.com/',url):
 	 	print('Please enter a valid website, or make sure it is a medium article')
 	 	sys.exit(1)
